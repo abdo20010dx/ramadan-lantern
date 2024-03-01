@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<style>
+    * {
+        text-align: center;
+        transform-style: preserve-3d;
+        transform: perspective(4000px);
+    }
+
+    @keyframes rotating {
+        0% {
+            transform: rotateY(0deg);
+            color: #003300;
+        }
+
+        25% {
+
+            color: #996600;
+        }
+
+        50% {
+
+            color: #660066;
+
+        }
+
+        75% {
+
+            color: #003300;
+        }
+
+        100% {
+            transform: rotateY(360deg);
+            color: #660066
+        }
+    }
+
+    .container {
+        position: absolute;
+        animation: rotating 9s infinite linear both;
+
+    }
+
+    div {
+        position: absolute;
+        left: 50%;
+
+    }
+
+    #ramadan1 {
+        transform: rotateY(30deg);
+
+    }
+
+    #ramadan2 {
+        transform: rotateY(150deg);
+
+    }
+
+    #ramadan3 {
+        transform: rotateY(130deg);
+
+    }
+
+    #ramadan4 {
+        transform: rotateY(110deg);
+
+    }
+
+    #ramadan5 {
+        transform: rotateY(90deg);
+
+    }
+
+    #ramadan6 {
+        transform: rotateY(60deg);
+
+    }
+
+    #ramadan7 {
+        transform: rotateY(15deg);
+
+    }
+
+    #ramadan8 {
+        transform: rotateY(165deg);
+
+    }
+
+    #ramadan9 {
+        transform: rotateY(75deg);
+
+    }
+
+    #ramadan10 {
+        transform: rotateY(120deg);
+
+    }
+
+    #ramadan11 {
+        transform: rotateY(105deg);
+
+    }
+
+    #ramadan12 {
+        transform: rotateY(45deg);
+
+    }
+
+    #mybutton {
+        font-size: 25px;
+
+    }
+</style>
+
+<body>
+    <audio controls loop autoplay id="mysong">
+        <source src="https://cdn1.esm3.com//music/460/m17315.mp3" type="audio/mpeg">
+
+    </audio>
+    <button id="mybutton" onclick=halla()>رمضان كريم</button>
+    <div id="container" class="">
+        <div id="ramadan">
+        </div>
+        <div id="ramadan1">
+        </div>
+        <div id="ramadan2">
+        </div>
+        <div id="ramadan3">
+        </div>
+        <div id="ramadan4">
+        </div>
+        <div id="ramadan5">
+        </div>
+        <div id="ramadan6"></div>
+        <div id="ramadan7"></div>
+        <div id="ramadan8"></div>
+        <div id="ramadan9"></div>
+        <div id="ramadan10"></div>
+        <div id="ramadan11"></div>
+        <div id="ramadan12"></div>
+    </div>
+</body>
+<script>
+    var ramadan = document.getElementById('ramadan');
+    var ramadan1 = document.getElementById('ramadan1');
+    var ramadan2 = document.getElementById('ramadan2');
+    var ramadan3 = document.getElementById('ramadan3');
+    var ramadan4 = document.getElementById('ramadan4');
+    var ramadan5 = document.getElementById('ramadan5');
+    var ramadan6 = document.getElementById('ramadan6');
+    var ramadan7 = document.getElementById('ramadan7');
+    var ramadan8 = document.getElementById('ramadan8');
+    var ramadan9 = document.getElementById('ramadan9');
+    var ramadan10 = document.getElementById('ramadan10');
+    var ramadan11 = document.getElementById('ramadan11');
+    var ramadan12 = document.getElementById('ramadan12');
+    var mybutton = document.getElementById('mybutton');
+    var container = document.getElementById('container');
+
+    var star = "0" + "<br>";
+
+    function halla(size) {
+        size = 23;
+        for (var i = 0; i < size; i++) {
+            for (var j = 0; j <= i; j++) {
+                if (i < size / 2) {
+                    star += "*";
+                }
+
+            }
+            for (var j = size; j >= i; j--) {
+                if (i >= size / 2 && i <= size * (75 / 100)) { star += "*"; }
+
+            }
+            for (var j = size * (30 / 100); j <= i; j++) {
+                if (i > size * (75 / 100)) {
+                    star += "*";
+
+                }
+
+            }
+            star += "<br>";
+            ramadan.innerHTML = star;
+            ramadan1.innerHTML = star;
+            ramadan2.innerHTML = star;
+            ramadan3.innerHTML = star;
+            ramadan4.innerHTML = star;
+            ramadan5.innerHTML = star;
+            ramadan6.innerHTML = star;
+            ramadan7.innerHTML = star;
+            ramadan8.innerHTML = star;
+            ramadan9.innerHTML = star;
+            ramadan10.innerHTML = star;
+            ramadan11.innerHTML = star;
+            ramadan12.innerHTML = star;
+        }
+        container.className = "container";
+        mybutton.style.display = "none";
+    }
+    //made by abdo ronaldo
+</script>
+
+</html>
