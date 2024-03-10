@@ -116,6 +116,49 @@
         font-size: 25px;
 
     }
+
+    @keyframes message {
+        0% {
+            color: #003300;
+            ;
+            opacity: 0%;
+        }
+
+        25% {
+            color: #996600;
+            ;
+            opacity: 25%;
+        }
+
+        50% {
+            color: #660066;
+            ;
+            opacity: 50%;
+        }
+
+        75% {
+            color: #003300;
+            ;
+            opacity: 75%;
+        }
+
+        100% {
+            color: #660066;
+            opacity: 100%;
+        }
+    }
+
+    .messageContainer {
+        position: absolute;
+        left: 30%;
+        top: 800%;
+        animation: message 1s infinite alternate-reverse both;
+
+    }
+
+    .message {
+        font-size: 400%;
+    }
 </style>
 
 <body>
@@ -145,6 +188,9 @@
         <div id="ramadan11"></div>
         <div id="ramadan12"></div>
     </div>
+    <div id="messageContainer">
+        <p id="message"></p>
+    </div>
 </body>
 <script>
     var ramadan = document.getElementById('ramadan');
@@ -162,6 +208,8 @@
     var ramadan12 = document.getElementById('ramadan12');
     var mybutton = document.getElementById('mybutton');
     var container = document.getElementById('container');
+    var messageContainer = document.getElementById('messageContainer');
+    var message = document.getElementById('message');
 
     var star = "0" + "<br>";
 
@@ -202,6 +250,9 @@
             ramadan12.innerHTML = star;
         }
         container.className = "container";
+        messageContainer.className = "messageContainer"
+        message.className = "message";
+        message.innerText = "رمضان كريم \n كل عام و انتم بخير"
         mybutton.style.display = "none";
     }
     //made by abdo ronaldo
