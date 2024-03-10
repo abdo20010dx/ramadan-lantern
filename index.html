@@ -113,6 +113,11 @@
     }
 
     #mybutton {
+        font-weight: bold;
+        padding: 2%;
+        top: 300%;
+        position: absolute;
+        left: 20%;
         font-size: 25px;
 
     }
@@ -159,14 +164,18 @@
     .message {
         font-size: 400%;
     }
+
+    .audio {
+        visibility: hidden;
+    }
 </style>
 
 <body>
-    <audio controls loop autoplay id="mysong">
+    <audio class="audio" controls loop autoplay id="mysong">
         <source src="https://cdn1.esm3.com//music/460/m17315.mp3" type="audio/mpeg">
 
     </audio>
-    <button id="mybutton" onclick=halla()>رمضان كريم</button>
+    <button id="mybutton" onclick=halla()>&#127881&#127881&#127881 Surprise !!! &#127881&#127881&#127881 </button>
     <div id="container" class="">
         <div id="ramadan">
         </div>
